@@ -1,22 +1,21 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class UseCaseExtend: MonoBehaviour
+public class UseCaseExtend : MonoBehaviour
 {
 	[SerializeField] private MonsterBase monsterA;
 	[SerializeField] private MonsterBase monsterB;
 
 	// Start is called before the first frame update
-	void Start()
-    {
+	private void Start()
+	{
 		Debug.Log("バトルスタート");
 		StartCoroutine(Battle());
-    }
+	}
 
 	private IEnumerator Battle()
 	{
-		while(monsterA.hitPoint > 0 && monsterB.hitPoint > 0)
+		while (monsterA.hitPoint > 0 && monsterB.hitPoint > 0)
 		{
 			monsterB.Damege(monsterA.Attack());
 			yield return null;
@@ -28,8 +27,8 @@ public class UseCaseExtend: MonoBehaviour
 	}
 
 	// Update is called once per frame
-	void Update()
-    {
-        
-    }
+	private void Update()
+	{
+
+	}
 }
