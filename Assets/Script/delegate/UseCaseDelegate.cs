@@ -1,14 +1,14 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class UseCaseExtend : MonoBehaviour
+public class UseCaseDelegate : MonoBehaviour
 {
-	[SerializeField] private MonsterBase monsterA;
-	[SerializeField] private MonsterBase monsterB;
 
-	[SerializeField] MonsterBase.State state;
+	[SerializeField] private MonsterEntity monsterA;
+	[SerializeField] private MonsterEntity monsterB;
 
-	// Start is called before the first frame update
+	[SerializeField] MonsterBehaviorState state;    // Start is called before the first frame update
 	private void Start()
 	{
 		monsterA.state = state;
@@ -30,5 +30,4 @@ public class UseCaseExtend : MonoBehaviour
 		Debug.Log("バトル終了");
 
 	}
-
 }
