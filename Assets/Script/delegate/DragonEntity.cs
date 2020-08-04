@@ -7,7 +7,7 @@ public class DragonEntity : MonsterEntity
     // Start is called before the first frame update
     void Awake()
     {
-		monsterBehavior = new SlimeBehavior();
+		monsterBehavior = new DragonBehavior();
 	}
 
 }
